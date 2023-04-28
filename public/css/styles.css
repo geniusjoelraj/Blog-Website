@@ -1,0 +1,97 @@
+:root{
+  --primary: #252525;
+  --seccondary: #8F43EE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: var(--primary);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+img{
+  height: 30px;
+}
+
+.sanji-logo{
+  height: 100px;
+}
+
+.search{
+  border: none;
+  border-radius: 0 2px 2px 0;
+  font-size: 1rem;
+  padding: 10px 0;
+  margin-left: 30px;
+  color: #252525;
+}
+
+.search:focus{
+  outline: none;
+}
+
+.search-icon{
+  background-color: white;
+  position: relative;
+  left: 40px;
+  height: 39px;
+  padding: 8px;
+  border-radius: 2px 0 0 2px;
+}
+
+.nav-items{
+  list-style: none;
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  color: white;
+  white-space: nowrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+a{
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after{
+  content: '';
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover::after{
+  width: 100%;
+}
