@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 :root{
   --primary: #252525;
-  --seccondary: #8F43EE;
+  --seccondary: #F7F7F7;
 }
 
 * {
@@ -9,11 +11,26 @@
   box-sizing: border-box;
 }
 
+::selection{
+  background-color: #4b4b4b;
+  color: #dbdbdb;
+}
+
+html{
+  height: 5000px;
+  position: relative;
+}
+
+/* Header */
+
 header{
   background-color: var(--primary);
-  padding: 1rem 5rem;
+  padding: 1rem 5rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .socials{
@@ -29,7 +46,7 @@ img{
 }
 
 .sanji-logo{
-  height: 100px;
+  height: 90px;
 }
 
 .search{
@@ -94,4 +111,119 @@ a::after{
 
 a:hover::after{
   width: 100%;
+}
+
+/* Scroll Header */
+
+.scroll-header{
+  background-color: var(--primary);
+  display: none;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.scroll-sanji-logo{
+  position: fixed;
+  top: 13px;
+  left: 10px;
+}
+
+.scroll-search-icon{
+  margin-left: 20px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+  background-color: var(--primary);
+  color: rgb(212, 212, 212);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:180px;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.profile-pic{
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-links{
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 20PX;
+}
+
+.one{
+  list-style: none;
+}
+
+.form-container{
+  background-color: var(--seccondary);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 180px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.subscription-form{
+  display: flex;
+  justify-content: center;
+}
+
+.form-head{
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.fInput{
+  border: 1px gray solid;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-family: monospace;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.fInput::placeholder{
+  color: var(--primary);
+}
+
+.description{
+  font-family: monospace;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.sub-btn{
+  border: none;
+  background-color: var(--primary);
+  color: var(--seccondary);
+  padding: 5px 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sub-btn:hover{
+  background-color: #363636;
 }
